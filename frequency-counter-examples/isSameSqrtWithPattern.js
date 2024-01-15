@@ -39,3 +39,7 @@ console.log(isSqrtSame([1,2,3,1],[1,4,1]))
 console.log(isSqrtSame([1,2,3],[1,4,10]))
 console.log(isSqrtSame([1,2,3,3,5,1],[1,4,9,25,9,1]))
 console.log(isSqrtSame([1,2,3,2,5],[9,1,4,4,11]))
+
+/*
+The reason for using this pattern is time complexity, nested loop has time complexity of O(N^2) which is there in isSameSqrtArrWithOutPattern.js but seperate loops have complexity of O(N) so this pattern helps us reduce the time complexity and optimize our algorithm
+*/
