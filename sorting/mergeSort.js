@@ -8,7 +8,11 @@
  */
 
 
-const mergeArray = require('./mergeArray.js')
+//const mergeArray = require('./mergeArray.js')
+/**
+ * Adding "type":"module" in package.json resolved the issue of import , otherwise you need to import via require because you are running code in Node
+ */
+import mergeArray from "./mergeArray.js"
 
 function mergeSort(arr){
     if(arr.length <=1) return arr

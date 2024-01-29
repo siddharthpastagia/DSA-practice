@@ -43,4 +43,8 @@ function mergeArray(arr1, arr2){
 // console.log(mergeArray([],[1,8,9]))
 // console.log(mergeArray([1,8,9],[1,8,9]))
 
-module.exports = mergeArray
+//module.exports = mergeArray
+/**
+ * Adding "type":"module" in package.json resolved the issue of export , otherwise you need to export via module.exports because you are running code in Node
+ */
+export default mergeArray
