@@ -7,32 +7,39 @@ Note: You may assume the string contains only lowercase alphabets.
 Time Complexity - O(n)
  */
 
-function validAnagram(str1, str2){
-    if(str1.length !== str2.length){
+// function validAnagram(str1, str2){
+//     if(str1.length !== str2.length){
+//         return false
+//     }
+//     let obj1 = {}
+//     let obj2 = {}
+//     // creating loop for str1
+//     for(let char of str1){
+//         obj1[char] = ++ obj1[char] || 1
+//     }
+//     // creating loop for str2
+//     for(let char of str2){
+//         obj2[char] = ++ obj2[char] || 1
+//     }
+//     // interate over keys of obj1
+//     for(let key in obj1){
+//         // check if key is present in obj2 or not
+//         if(!(key in obj2)){
+//             return false
+//         }
+//         // check if count of all keys are same in both string (objects)
+//         if(obj2[key] !== obj1[key]){
+//             return false
+//         }
+//     }
+//     return true
+//   }
+
+  function validAnagram(str1, str2){
+    if(!str1 || !str2 || str1.length !== str2.length){
         return false
     }
-    let obj1 = {}
-    let obj2 = {}
-    // creating loop for str1
-    for(let char of str1){
-        obj1[char] = ++ obj1[char] || 1
-    }
-    // creating loop for str2
-    for(let char of str2){
-        obj2[char] = ++ obj2[char] || 1
-    }
-    // interate over keys of obj1
-    for(let key in obj1){
-        // check if key is present in obj2 or not
-        if(!(key in obj2)){
-            return false
-        }
-        // check if count of all keys are same in both string (objects)
-        if(obj2[key] !== obj1[key]){
-            return false
-        }
-    }
-    return true
+    return str1.split('').sort().join('') === str2.split('').sort().join('')
   }
   
   console.log(validAnagram('',''))
